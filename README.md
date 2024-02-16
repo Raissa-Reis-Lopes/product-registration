@@ -10,7 +10,7 @@ O id do objeto produto deve ser um timestamp.
 
 Caso o usuário preencha algum dado incorreto (condições de validação de nome, descrição e valor, que não podem estar vazios e o valor deve ser positivo) e clique no botão “Incluir produto”, deverá ser mostrada uma mensagem do tipo “Falha no cadastro do produto!” e, se possível, o motivo da falha na inclusão do produto (onde houve o erro ?).
 
-Quando um produto é incluído com sucesso, ele deve aparecer numa <table> que fica embaixo do formulário de inclusão.
+Quando um produto é incluído com sucesso, ele deve aparecer numa table que fica embaixo do formulário de inclusão.
 
 A tabela deve conter 4 colunas: Nome, Valor, Editar e Apagar (note que não tem uma coluna para a descrição nem para o ID do produto).
 
