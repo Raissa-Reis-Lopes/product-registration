@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9 JS - Questão 4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            position: relative;
+            background-color: beige;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 50px 50px;
+        }
+
+        .addButton, .buttonModal{
+            outline: none;
+            background-color: lightblue;
+            border: 1px solid steelblue;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px 5px;
+            padding: 10px 10px;
+            font-weight: 600;
+        }
+
+        .addButton:hover{
+            scale: 1.02;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3{
+            margin: 10px;
+        }
+
+        table{
+            padding: 10px;
+            margin-top:50px;
+            border: 1px solid black;
+            width: 800px;
+            text-align: center;
+            align-self: center;
+        }
+        th,td{
+            padding: 10px;
+            width: 200px;
+        }
+
+        .bgModal{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0,0.4);
+            z-index: 50;
+        }
+
+        .modal{
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-color: rgb(209, 208, 238);
+            border: 1px solid black;
+            border-radius: 20px 20px;
+            top: 25%;
+            left: 35%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+            flex-direction: column;
+        }
+
+       
+
+
+        .formEdit{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+
+        }
+
+        .titleEdit{
+            margin: 5px;
+        }
+
+        .modalHeader, .infoModal{
+            flex:auto;
+        }
+
+        .infoModal{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .infoModal>div{
+            margin: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form >
+            <h3>Nome do Produto: </h3><input id="nome" type="text">
+            <h3>Descrição do produto: </h3><textarea  id="descricao" class="descricao" cols="30" rows="10"></textarea>
+            <h3>Valor do produto: </h3><input id="valor" type="number">
+            <button class="addButton" id="add">Inlcuir Produto</button>
+            <h3 id="mensagem"></h3>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Editar</th>
+                    <th>Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="conteudoTabela">
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="bgModalInfo" class="bgModal hidden">
+        <div id="modalContent" class="modal">
+            <button id="fecharModal" class="buttonModal"></button>         
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
